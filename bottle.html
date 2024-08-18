@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendy Trades - Bottles & Flasks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar .logo h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .navbar nav ul li {
+            margin-left: 20px;
+        }
+
+        .navbar nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .products {
+            margin: 20px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            margin-bottom: 10px;
+            transition: transform 0.2s;
+        }
+
+        .product-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .product-item h3 {
+            margin: 10px 0 0;
+            font-size: 18px;
+        }
+
+        .price {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .details-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .details-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .product-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Trendy Trades</h1>
+                <p>Your One-Stop Shopping Solution for Home</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="banner">
+            <h2>Gifting Deal: Shop above Rs. 9,999 and Avail a 10% Discount!</h2>
+        </div>
+    </header>
+
+    <!-- Bottle Products Section -->
+    <section class="products">
+        <h2>Bottles & Flasks</h2>
+        <div class="product-grid">
+            <!-- Bottle Product Item -->
+            <div class="product-item">
+                <img src="https://www.bing.com/th?id=OIP.zaL7SL39g6ZgxYFC4KihlQHaHa&w=150&h=150&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Artesia Thermosteel Bottle">
+                <h3>Artesia Thermosteel Bottle</h3>
+                <p class="price">₹ 676.00 <span class="original-price">₹ 845.00</span> Save 20%</p>
+                <button class="details-button" onclick="openDetails('Artesia Thermosteel Bottle', 676.00)">View Details</button>
+            </div>
+            <div class="product-item">
+                <img src="https://th.bing.com/th/id/OIP.As0_4ZIw7CaNvrAX4kSMcgAAAA?w=186&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Atlantis Thermosteel Water Bottle">
+                <h3>Atlantis Thermosteel Water Bottle</h3>
+                <p class="price">₹ 580.00 <span class="original-price">₹ 725.00</span> Save 20%</p>
+                <button class="details-button" onclick="openDetails('Atlantis Thermosteel Water Bottle', 580.00)">View Details</button>
+            </div>
+            <div class="product-item">
+                <img src="https://example.com/images/aqua-stainless-steel-bottle.jpg" alt="Aqua Stainless Steel Bottle">
+                <h3>Aqua Stainless Steel Bottle</h3>
+                <p class="price">₹ 277.00 <span class="original-price">₹ 355.00</span> Save 22%</p>
+                <button class="details-button" onclick="openDetails('Aqua Stainless Steel Bottle', 277.00)">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
